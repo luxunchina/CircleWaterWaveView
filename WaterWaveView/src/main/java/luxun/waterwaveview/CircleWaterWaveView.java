@@ -140,6 +140,9 @@ public class CircleWaterWaveView extends SurfaceView implements SurfaceHolder.Ca
         mOutRadius = minLength / 2;
         mRadius = (int) (0.5 * (minLength - mOutStrokeWidth));
         mCenterPoint = new Point(minLength / 2, minLength / 2);
+        if (progress != 0) {
+            setProgress(progress);
+        }
     }
 
     @Override
