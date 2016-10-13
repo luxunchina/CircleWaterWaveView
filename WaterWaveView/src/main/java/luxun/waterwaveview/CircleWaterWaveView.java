@@ -106,7 +106,7 @@ public class CircleWaterWaveView extends SurfaceView implements SurfaceHolder.Ca
      * @param attrs
      */
     private void loadAttrs(AttributeSet attrs, int defStyle) {
-        final TypedArray a = getContext().obtainStyledAttributes(
+        TypedArray a = getContext().obtainStyledAttributes(
                 attrs, R.styleable.CircleWaterWaveView, defStyle, 0);
         textColor = a.getColor(
                 R.styleable.CircleWaterWaveView_textColor,
@@ -126,6 +126,7 @@ public class CircleWaterWaveView extends SurfaceView implements SurfaceHolder.Ca
         increase = a.getFloat(R.styleable.CircleWaterWaveView_increase, increase);
         mWaterSpeed = a.getInt(R.styleable.CircleWaterWaveView_waterSpeed, mWaterSpeed);
         mUpSpeed = a.getInt(R.styleable.CircleWaterWaveView_upSpeed, mUpSpeed);
+        a.recycle();
     }
 
     @Override
